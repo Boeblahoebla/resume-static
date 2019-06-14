@@ -1,0 +1,116 @@
+.tl {
+  position: relative;
+  margin-left: 4em;
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 3px;
+    background: $light-border-timeline-color;
+    position: absolute;
+    left: -3rem;
+  }
+
+  &__item {
+    position: relative;
+    padding: 1em;
+    margin: 2.5em 0;
+
+    &__content::before, &__content::after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    &__content {
+
+      p:hover {
+        cursor: pointer;
+        background: $paragraphs-bg-color-hover;
+      }
+
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f254";
+        color: $icon-color;
+        background: #fff;
+        left: -1.4em;
+        top: -1.4em;
+        width: 50px;
+        height: 50px;
+        font-size: larger;
+        border: 3px solid $icon-color;
+        box-shadow: 0 0 0 0.5em #fff;
+      }
+
+      &--react::before,
+      &--android::before,
+      &--digipoint::before,
+      &--backend::before,
+      &--support::before,
+      &--frontend::before,
+      &--reactedu::before,
+      &--google::before,
+      &--hogent::before,
+      &--meteo::before,
+      &--self::before {
+        height: 3em;
+        width: 3em;
+        background: $bootstrap-blue-color;
+        left: -4.3em;
+        top: calc(50% - 1.5em);
+        box-shadow: 0 0 0 0.4em $circles-gray-bg-color;
+        font-weight: 600;
+        font-size: large;
+        color: #fff;
+      }
+
+      &--react::before {
+        content: '2018'
+      }
+
+      &--android::before {
+        content: '2017'
+      }
+
+      &--digipoint::before {
+        content: '2015'
+      }
+
+      &--backend::before {
+        content: '2015'
+      }
+
+      &--support::before {
+        content: '2003'
+      }
+
+      &--frontend::before {
+        content: '2018'
+      }
+
+      &--reactedu::before {
+        content: '2018'
+      }
+
+      &--google::before {
+        content: '2017'
+      }
+
+      &--meteo::before {
+        content: '2009'
+      }
+
+      &--hogent::before {
+        content: '2003'
+      }
+
+      &--self::before {
+        content: '2000'
+      }
+    }
+  }
+}

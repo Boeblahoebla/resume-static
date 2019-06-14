@@ -1,0 +1,75 @@
+@media screen and (max-width: 991px) {
+
+  .container-fluid {
+    padding: 3em 2em;
+  }
+
+  .tl {
+    margin-left: 0;
+
+    &::before {
+      left: calc(50% - 1px);
+    }
+
+    &__item {
+      margin: 6em 0;
+
+      &__content {
+        &--react::before,
+        &--android::before,
+        &--digipoint::before,
+        &--backend::before,
+        &--frontend::before,
+        &--reactedu::before,
+        &--google::before,
+        &--self::before {
+          left: calc(50% - 1.45em);
+          top: -4.3em;
+        }
+      }
+    }
+  }
+
+  .header {
+    margin-bottom: 11em;
+    padding: 1em 0;
+
+    &--work::before,
+    &--edu::before {
+      left: calc(50% - 1em);
+      top: 3.4em;
+    }
+
+    &--work::after,
+    &--edu::after {
+      left: calc(50% - 1px);
+      top: 15em;
+    }
+
+    &--credentials {
+      margin-bottom: 0;
+    }
+  }
+
+  .arrow-box:after, .arrow-box:before {
+    display: none;
+  }
+
+  .credentials {
+    padding: 0;
+
+    &__section {
+      &__item {
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: center;
+      }
+    }
+  }
+
+  .personal-info {
+    &__content {
+      right: -0.5em;
+    }
+  }
+}

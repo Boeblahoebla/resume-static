@@ -1,0 +1,31 @@
+.arrow-box {
+  position: relative;
+  background: #fff;
+  border: 3px solid $light-border-timeline-color;
+  border-radius: 15px;
+
+  &::after, &::before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-color: $transparent-color;
+    border-right-color: #fff;
+    border-width: 10px;
+    margin-top: -10px;
+  }
+
+  &::before {
+    border-color: $transparent-color;
+    border-right-color: $light-border-timeline-color;
+    border-width: 16px;
+    margin-top: -16px;
+  }
+}

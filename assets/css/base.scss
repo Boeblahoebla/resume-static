@@ -1,0 +1,82 @@
+.container-fluid {
+  padding: 3em;
+  position: relative;
+}
+
+.header {
+  padding: 1em;
+  position:relative;
+  text-align: center;
+
+  &--work::before, &--edu::before {
+    font-family: "Font Awesome 5 Free";
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background: #ffbb33;
+    position: absolute;
+    left: -0.5em;
+    top: 0.7em;
+    box-shadow: 0 0 0 0.4em $circles-gray-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2em;
+    color: #fff;
+  }
+
+  &--work::before {
+    content: '\f0b1';
+  }
+
+  &--edu::before {
+    content: '\f19d';
+  }
+
+  &--work::after, &--edu::after {
+    content: '';
+    height: 3.19em;
+    width: 3px;
+    background: $circles-gray-bg-color;
+    position: absolute;
+    left: 1em;
+    top: 6em;
+  }
+}
+
+.language-switcher {
+  position: absolute;
+  border-radius: 50%;
+  top: 1.2em;
+  left: 1.2em;
+  padding: 0.3em;
+
+  button {
+    background: transparent;
+    border: 0;
+  }
+
+  button#nl::before, button#en::before {
+    content: '';
+    position: absolute;
+    bottom: -0.3em;
+    height: 3px;
+    width: 2em;
+    background: $icon-color;
+  }
+
+  .hidden::before {
+    display: none;
+  }
+}
+
+#spinner {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
